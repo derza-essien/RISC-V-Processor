@@ -8,3 +8,18 @@ This is typically used to forward instructions, ensuring that the larger portion
 
 The branch predictor was implemented using a 4-way state machine seen in the example below:
 
+```mermaid
+flowchart LR
+
+A[Strongly Taken] -. branch not taken .-> B[Weakly Taken]
+B -. branch not taken .-> C[Weakly Not Taken]
+C -. branch not taken .-> D[Strongly Not Taken]
+D -. branch taken .-> C
+C -. branch taken .-> B
+B -. branch taken .-> A
+
+```
+
+The initial state was the `Strongly Taken` state, and depending on how conditions were met in the following branches, would depend on what state we entered.
+
+The `Strongly` states were used to allow for forwading of data (whether that be from the instructions targetted by the jump, or those directly after the jump). Whereas the `weakly` states were used to differentiate between the opposite ends of the branch predictor ensureing that we were not wasting multiple cycles of flushing data.
