@@ -10,7 +10,7 @@ Each entry into the cache contains a struct of the following signals.
 
 ```systemverilog
 typedef struct packed {
-        logic                   valid; // ensures only valid data is inserted
+        logic                   valid; // ensures valid data is inserted
         logic                   lru; // used for policy 
         logic [TAG_WIDTH-1:0]   tag; // used to match entries
         logic [DATA_WIDTH-1:0]  data;
