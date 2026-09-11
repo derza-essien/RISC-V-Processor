@@ -14,5 +14,6 @@ This processor is a 5-stage (IF/ID/EX/MEM/WB) pipelined RV32I core which include
 | Branch Prediction | [branch prediction](https://github.com/derza-essien/RISC-V-Processor/blob/main/documentation/branch_prediction.md) |
 | Control Unit | [control unit](https://github.com/derza-essien/RISC-V-Processor/blob/main/documentation/control_unit.md) |
 | Hazard Detection & Forwarding | [hazard detection & forwarding](https://github.com/derza-essien/RISC-V-Processor/blob/main/documentation/hazard_detection_and_forwarding.md) |
+| Cache | [cache]
 | Pipelining & Top-Level Design | [pipelining & top-level design](https://github.com/derza-essien/RISC-V-Processor/blob/main/documentation/pipelining_and_top_level_design.md) |
-| Verification | [verification](https://github.com/derza-essien/RISC-V-Processor/blob/main/documentation/verification.md) |
+
